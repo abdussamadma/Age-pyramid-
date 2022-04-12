@@ -1,7 +1,12 @@
 library(tidycensus)
-library(plotly)
+library(ggplot2)
 library(cowplot)
+library(plotly)
 library(patchwork)
+library(stringr)
+census_api_key("c743dd3966fcbb89cc30a9bbbccd14e2024d76cb",
+               install = TRUE) 
+
 ##----wisconsin-data---------
 
 wisconsin <- get_estimates(
